@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="elo.js" type="module"></script>
+
+<style>
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  display: grid;
+  grid-template-areas:
+    'algo chart chart chart chart chart'
+    'bots chart chart chart chart chart'
+    'bots chart chart chart chart chart';
+  gap: 0px;
+  padding: 0px;
+}
+
+h3 {
+  text-align: center;
+}
+
+li {
+  cursor: pointer;
+}
+li:hover {
+  background-color: aliceBlue;
+}
+
+#loading {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  padding: 5rem;
+  background-color: white;
+}
+
+#algo {
+  grid-area: algo;
+  padding: 0px 1rem;
+}
+
+#bots {
+  grid-area: bots;
+  padding: 0px 1rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#chart {
+  grid-area: chart;
+  padding: 0px;
+}
+
+</style>
+
+<body>
+  <div id="loading">Loading match data. Please wait...</div>
+  <div id="algo">
+    <h3>Algorithms</h3>
+    <ul id="algo-list"></ul>
+  </div>
+  <div id="bots">
+    <h3>Bots</h3>
+    <ul id="bots-list"></ul>
+  </div>
+  <div id="chart"></div>
+</body>
+</html>
