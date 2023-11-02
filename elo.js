@@ -55,7 +55,7 @@ $(document).ready(async function() {
 
 async function load() {
   return new Promise(function(resolve) {
-    $.get("/ladder.txt", function(data) {
+    $.get("/aiarena-elo/ladder.txt", function(data) {
       matches = data.split("\n").map(parseMatchLine);
       resolve();
     });
