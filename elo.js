@@ -6,6 +6,7 @@ import AlgorithmElo8 from "./algorithmElo8.js";
 import AlgorithmElo8RoundReset from "./algorithmElo8RoundReset.js";
 import AlgorithmEloAbsolute from "./algorithmEloAbsolute.js";
 import AlgorithmEloPlacements from "./algorithmEloPlacements.js";
+import AlgorithmRollingScaling from "./algorithmRollingScaling.js";
 
 const START_TIME = 1664747000000;
 const SEASONS = {
@@ -24,8 +25,9 @@ const algorithms = [
   new AlgorithmBonusPool(2, false),
   new AlgorithmBonusComponent(3, true),
   new AlgorithmElo8(4, true),
-  new AlgorithmEloAbsolute(5, false),
-  new AlgorithmEloPlacements(6, true),
+  new AlgorithmRollingScaling(5, true),
+  new AlgorithmEloAbsolute(6, false),
+  new AlgorithmEloPlacements(7, true),
 ];
 
 let width;
