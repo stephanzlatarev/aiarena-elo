@@ -36,7 +36,7 @@ export default class Algorithm {
     const opponentBonus = this.bonus.has(match.opponent) ? Math.max(this.bonus.get(match.opponent), 0) : this.start;
 
     const rate = 1.0 / (1.0 + Math.pow(10.0, (opponentRating + opponentBonus - botRating - botBonus) / 400.0));
-    const ratingChange = this.k * (WIN_RATE[match.outcome] - rate);
+    const ratingChange = Math.round(this.k * (WIN_RATE[match.outcome] - rate));
     const bonusReduction = Math.abs(ratingChange);
 
     if (botBonus > 0) {
