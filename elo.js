@@ -1,5 +1,6 @@
 import bots from "./bots.json" assert { type: "json" };
 import AlgorithmArena from "./algorithmArena.js";
+import AlgorithmBonusComponent from "./algorithmBonusComponent.js";
 import AlgorithmBonusPool from "./algorithmBonusPool.js";
 import AlgorithmElo8 from "./algorithmElo8.js";
 import AlgorithmElo8RoundReset from "./algorithmElo8RoundReset.js";
@@ -19,11 +20,12 @@ const SEASONS = {
 
 const algorithms = [
   new AlgorithmArena(0, true),
-  new AlgorithmElo8RoundReset(2, true),
-  new AlgorithmBonusPool(1, true),
-  new AlgorithmElo8(3, true),
-  new AlgorithmEloAbsolute(4, false),
-  new AlgorithmEloPlacements(5, true),
+  new AlgorithmElo8RoundReset(1, true),
+  new AlgorithmBonusPool(2, false),
+  new AlgorithmBonusComponent(3, true),
+  new AlgorithmElo8(4, true),
+  new AlgorithmEloAbsolute(5, false),
+  new AlgorithmEloPlacements(6, true),
 ];
 
 let width;
