@@ -4,7 +4,7 @@ export default class Algorithm extends Elo {
 
   name = "Elo Rating With Bonus Pool";
   color = "rgb(200,100,100)";
-  description = "Resets rating to 800 and bonus pool to 800 at start of the season. Rewards wins with 10 bonus points.";
+  description = "Resets rating to 800 and bonus pool to 800 at start of the season. Wins are rewarded with matching bonus points. Loss reduce the bonus pool.";
 
   constructor(id, selected) {
     super(800, 8, true);
